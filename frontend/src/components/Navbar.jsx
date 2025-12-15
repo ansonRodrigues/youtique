@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -30,15 +31,15 @@ const Navbar = () => {
             [&_a:hover::after]:w-full
           "
         >
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Collection</a>
-          </li>
-          <li>
-            <a>About</a>
-          </li>
+          <NavLink to="/">
+            <p>Home</p>
+          </NavLink>
+          <NavLink to="/collection">
+            <p>Collection</p>
+          </NavLink>
+          <NavLink to="/about">
+            <p>About</p>
+          </NavLink>
         </ul>
       </div>
     </nav>
