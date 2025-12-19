@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Collection from "./pages/Collection";
+import Collections from "./pages/Collections";
 import NotFound from "./pages/404";
 import { Routes, Route } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/collection" element={<Collection />} />
+        <Route path="/collections" element={<Collections />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

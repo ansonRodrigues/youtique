@@ -1,6 +1,6 @@
 import React from "react";
 
-const Collection = () => {
+const Collections = () => {
   let a = 10;
   let b = [1, 2, 3, 4, 50];
 
@@ -16,4 +16,4 @@ const Collection = () => {
   );
 };
 
-export default Collection;
+export default Collections;

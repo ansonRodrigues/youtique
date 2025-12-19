@@ -31,9 +31,12 @@ const Navbar = () => {
           "
         >
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/collection">Collection</NavLink>
+          <NavLink to="/collections">Collection</NavLink>
           <NavLink to="/about">About</NavLink>
         </ul>
+        <div className="flex items-center gap-6 ml-auto">
+          <img src={assets.loginImg} alt="" className="w-5 cursor-pointer" />
+        </div>
       </div>
     </nav>
   );
