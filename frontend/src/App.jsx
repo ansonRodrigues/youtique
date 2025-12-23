@@ -9,7 +9,7 @@ import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
+    <div className="min-h-screen bg-[#FCE7D8]">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </div>
   );
 };
 
