@@ -1,6 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -37,10 +37,21 @@ const Navbar = () => {
 
         <div className="flex items-center gap-6 ml-auto">
           <img
-            src={assets.cart}
-            alt="Cart"
+            src={assets.searchIcon}
+            alt="Search"
             className="w-5 cursor-pointer opacity-80 hover:opacity-100 transition"
           />
+
+          <Link to="/cart" className="relative inline-block">
+            <img
+              src={assets.cart}
+              alt="Cart"
+              className="w-5 opacity-80 hover:opacity-100 transition"
+            />
+            <span className="absolute -top-2 -right-2 bg-[#C9A24D] text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+              2
+            </span>
+          </Link>
 
           <img
             src={assets.loginImg}
