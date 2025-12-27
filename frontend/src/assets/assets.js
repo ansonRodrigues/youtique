@@ -4,6 +4,7 @@ import notfoundPage from "./404error.png";
 import loginImg from "./login.png";
 import cart from "./cart.png";
 import searchIcon from "./search.png";
+import heroImg from "./hero.png";
 
 export const assets = {
   logo,
@@ -12,4 +13,5 @@ export const assets = {
   loginImg,
   cart,
   searchIcon,
+  heroImg,
 };
