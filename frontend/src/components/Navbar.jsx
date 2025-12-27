@@ -6,10 +6,8 @@ const Navbar = () => {
   return (
     <nav className="h-20 bg-white px-6 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
       <div className="relative flex items-center h-full max-w-7xl mx-auto">
-        {/* Logo */}
         <img src={assets.logo} alt="Youtique" className="w-36" />
 
-        {/* Center links */}
         <ul
           className="
             hidden lg:flex absolute left-1/2 -translate-x-1/2
@@ -37,8 +35,13 @@ const Navbar = () => {
           <NavLink to="/about">About</NavLink>
         </ul>
 
-        {/* Right icons */}
         <div className="flex items-center gap-6 ml-auto">
+          <img
+            src={assets.cart}
+            alt="Cart"
+            className="w-5 cursor-pointer opacity-80 hover:opacity-100 transition"
+          />
+
           <img
             src={assets.loginImg}
             alt="Login"

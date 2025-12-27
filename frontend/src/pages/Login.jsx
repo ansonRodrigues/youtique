@@ -12,7 +12,6 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center py-24 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-8">
-        {/* Heading */}
         <h2 className="text-3xl font-light text-[#3A2E2A] text-center mb-2">
           Welcome Back
         </h2>
@@ -20,7 +19,6 @@ const Login = () => {
           Sign in to continue shopping
         </p>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <input
             type="email"
@@ -68,7 +66,6 @@ const Login = () => {
           </button>
         </form>
 
-        {/* Footer */}
         <p className="text-center text-sm text-[#6B5C55] mt-6">
           Don’t have an account?{" "}
           <span className="text-[#C9A24D] cursor-pointer hover:underline">
