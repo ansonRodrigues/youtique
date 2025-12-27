@@ -1,63 +1,79 @@
 import React, { useState } from "react";
 
 const Login = () => {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ name, email, password });
+    console.log({ email, password });
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-purple-400 via-pink-500 to-red-500 p-4">
-      <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl w-full max-w-md">
-        <h2 className="text-4xl font-extrabold text-white mb-6 text-center">
-          Sign Up
+    <div className="flex items-center justify-center py-24 px-4">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-8">
+        {/* Heading */}
+        <h2 className="text-3xl font-light text-[#3A2E2A] text-center mb-2">
+          Welcome Back
         </h2>
+        <p className="text-sm text-[#6B5C55] text-center mb-8">
+          Sign in to continue shopping
+        </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-5">
           <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            required
-            placeholder="Full Name"
-            className="w-full px-4 py-3 rounded-lg bg-white/20 focus:bg-white/30 focus:ring-2 focus:ring-purple-300 text-white placeholder-gray-200"
-          />
-
-          <input
+            type="email"
+            placeholder="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            type="email"
             required
-            placeholder="Email Address"
-            className="w-full px-4 py-3 rounded-lg bg-white/20 focus:bg-white/30 focus:ring-2 focus:ring-purple-300 text-white placeholder-gray-200"
+            className="
+              w-full px-4 py-3 rounded-lg
+              border border-[#E6D5C7]
+              text-[#3A2E2A]
+              placeholder-[#9A857A]
+              focus:outline-none
+              focus:ring-2 focus:ring-[#C9A24D]/40
+            "
           />
 
           <input
+            type="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            type="password"
             required
-            placeholder="Password"
-            className="w-full px-4 py-3 rounded-lg bg-white/20 focus:bg-white/30 focus:ring-2 focus:ring-purple-300 text-white placeholder-gray-200"
+            className="
+              w-full px-4 py-3 rounded-lg
+              border border-[#E6D5C7]
+              text-[#3A2E2A]
+              placeholder-[#9A857A]
+              focus:outline-none
+              focus:ring-2 focus:ring-[#C9A24D]/40
+            "
           />
 
           <button
             type="submit"
-            className="w-full bg-linear-to-r from-purple-500 to-pink-500 text-white font-bold py-3 rounded-lg focus:ring-4 focus:ring-purple-300"
+            className="
+              w-full py-3 rounded-lg
+              bg-[#3A2E2A]
+              text-white font-light tracking-wide
+              hover:bg-[#2F2522]
+              transition
+            "
           >
-            Sign Up
+            Log In
           </button>
         </form>
 
-        <p className="text-white text-center mt-6">
-          Already have an account?{" "}
-          <a href="#" className="font-bold hover:underline">
-            Log in
-          </a>
+        {/* Footer */}
+        <p className="text-center text-sm text-[#6B5C55] mt-6">
+          Don’t have an account?{" "}
+          <span className="text-[#C9A24D] cursor-pointer hover:underline">
+            Sign up
+          </span>
         </p>
       </div>
     </div>
