@@ -4,18 +4,14 @@ import { assets } from "../assets/assets";
 const About = () => {
   return (
     <section className="py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 w-full">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start order-2 lg:order-1">
-            <div className="relative max-w-md w-full">
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#F5D5C0] rounded-full blur-3xl opacity-60"></div>
-
-              <img
-                src={assets.aboutUs}
-                alt="About Youtique"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+            <img
+              src={assets.aboutUs}
+              alt="About Youtique"
+              className="w-full max-w-sm lg:max-w-md h-auto object-contain"
+            />
           </div>
 
           <div className="w-full lg:w-1/2 flex flex-col items-start space-y-4 lg:space-y-6 order-1 lg:order-2">
