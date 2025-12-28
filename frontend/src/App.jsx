@@ -7,10 +7,12 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import NotFound from "./pages/404";
 import { Routes, Route } from "react-router-dom";
+import Background from "./components/Background";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#FCE7D8]">
+    <div className="min-h-screen relative">
+      <Background />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
