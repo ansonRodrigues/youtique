@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const About = () => {
   return (
     <>
-      <section className="overflow-hidden py-20">
+      <section className="overflow-hidden py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col items-center justify-between gap-12 lg:flex-row lg:gap-20">
             <div className="order-2 flex w-full justify-center lg:order-1 lg:w-1/2 lg:justify-start">
@@ -37,14 +37,68 @@ const About = () => {
                   timeless aesthetics with modern simplicity.
                 </p>
                 <p>
-                  Our collections are made to be worn effortlessly, whether it’s
-                  a casual day out or a special occasion.
+                  Our journey began with a simple idea: to create jewelry that
+                  doesn't just sit in a box, but becomes a part of your daily
+                  expression.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* --- Values Section --- */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <h3 className="mb-12 font-serif text-3xl text-[#3A2E2A]">
+            What Sets Us Apart
+          </h3>
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium tracking-widest text-[#C9A24D] uppercase">
+                Quality Materials
+              </h4>
+              <p className="text-[#3A2E2A] opacity-70">
+                We source only the finest sustainable metals and ethically
+                obtained gemstones.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium tracking-widest text-[#C9A24D] uppercase">
+                Artisan Design
+              </h4>
+              <p className="text-[#3A2E2A] opacity-70">
+                Every curve and clasp is sketched by hand and refined for
+                ultimate comfort.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium tracking-widest text-[#C9A24D] uppercase">
+                Timeless Style
+              </h4>
+              <p className="text-[#3A2E2A] opacity-70">
+                Our pieces are designed to transcend trends and be loved for
+                generations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- Mission Statement / CTA --- */}
+      <section className="bg-[#3A2E2A] py-24 text-white">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <h2 className="mb-6 font-serif text-3xl md:text-4xl">
+            Experience the Youtique Touch
+          </h2>
+          <p className="mb-10 text-lg font-light italic opacity-80">
+            "Jewelry that speaks when you don't have to."
+          </p>
+          <button className="bg-[#C9A24D] px-8 py-3 text-sm font-medium tracking-widest text-white uppercase transition-colors duration-300 hover:bg-[#b08b3a]">
+            Shop the Collection
+          </button>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
