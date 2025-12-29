@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-black/5 pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer className="border-t border-black/5 bg-white pt-16 pb-8">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* BRAND COLUMN */}
           <div className="space-y-6">
             <h3 className="font-serif text-2xl text-[#3A2E2A]">Youtique</h3>
-            <p className="text-[#3A2E2A] opacity-70 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-[#3A2E2A] opacity-70">
               Handcrafted resin art and bead bracelets designed to reflect your
               unique soul. Every piece tells a story of nature and elegance.
             </p>
@@ -18,13 +18,13 @@ const Footer = () => {
               {/* Replace with actual social icons from your assets */}
               <a
                 href="#"
-                className="w-8 h-8 rounded-full border border-[#3A2E2A]/20 flex items-center justify-center text-[#3A2E2A] hover:bg-[#3A2E2A] hover:text-white transition-all"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-[#3A2E2A]/20 text-[#3A2E2A] transition-all hover:bg-[#3A2E2A] hover:text-white"
               >
                 <span className="text-xs">IG</span>
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full border border-[#3A2E2A]/20 flex items-center justify-center text-[#3A2E2A] hover:bg-[#3A2E2A] hover:text-white transition-all"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-[#3A2E2A]/20 text-[#3A2E2A] transition-all hover:bg-[#3A2E2A] hover:text-white"
               >
                 <span className="text-xs">FB</span>
               </a>
@@ -33,14 +33,14 @@ const Footer = () => {
 
           {/* QUICK LINKS */}
           <div>
-            <h4 className="font-medium text-[#3A2E2A] uppercase tracking-widest text-xs mb-6">
+            <h4 className="mb-6 text-xs font-medium tracking-widest text-[#3A2E2A] uppercase">
               Collections
             </h4>
             <ul className="space-y-4">
               <li>
                 <Link
                   to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 hover:text-[#C9A24D] transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
                 >
                   Bead Bracelets
                 </Link>
@@ -48,7 +48,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 hover:text-[#C9A24D] transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
                 >
                   Resin Art
                 </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 hover:text-[#C9A24D] transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
                 >
                   New Arrivals
                 </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 hover:text-[#C9A24D] transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
                 >
                   Gift Sets
                 </Link>
@@ -74,14 +74,14 @@ const Footer = () => {
 
           {/* COMPANY */}
           <div>
-            <h4 className="font-medium text-[#3A2E2A] uppercase tracking-widest text-xs mb-6">
+            <h4 className="mb-6 text-xs font-medium tracking-widest text-[#3A2E2A] uppercase">
               Customer Care
             </h4>
             <ul className="space-y-4">
               <li>
                 <Link
                   to="/about"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
                 >
                   Our Story
                 </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/shipping"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
                 >
                   Shipping Policy
                 </Link>
@@ -97,7 +97,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
                 >
                   Contact Us
                 </Link>
@@ -105,7 +105,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/faq"
-                  className="text-sm text-[#3A2E2A] opacity-70 hover:opacity-100 transition-all"
+                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
                 >
                   FAQs
                 </Link>
@@ -115,7 +115,7 @@ const Footer = () => {
 
           {/* NEWSLETTER / CALL TO ACTION */}
           <div className="space-y-6">
-            <h4 className="font-medium text-[#3A2E2A] uppercase tracking-widest text-xs mb-2">
+            <h4 className="mb-2 text-xs font-medium tracking-widest text-[#3A2E2A] uppercase">
               Stay Connected
             </h4>
             <p className="text-sm text-[#3A2E2A] opacity-70">
@@ -125,9 +125,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="bg-transparent border-b border-[#3A2E2A]/30 py-2 text-sm focus:outline-none focus:border-[#C9A24D] transition-all text-[#3A2E2A]"
+                className="border-b border-[#3A2E2A]/30 bg-transparent py-2 text-sm text-[#3A2E2A] transition-all focus:border-[#C9A24D] focus:outline-none"
               />
-              <button className="text-left text-xs uppercase tracking-[0.2em] font-semibold text-[#3A2E2A] pt-2 hover:text-[#C9A24D] transition-all">
+              <button className="pt-2 text-left text-xs font-semibold tracking-[0.2em] text-[#3A2E2A] uppercase transition-all hover:text-[#C9A24D]">
                 Subscribe &rarr;
               </button>
             </div>
@@ -135,13 +135,13 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="pt-8 border-t border-[#3A2E2A]/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] uppercase tracking-widest text-[#3A2E2A] opacity-50">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-[#3A2E2A]/10 pt-8 md:flex-row">
+          <p className="text-[10px] tracking-widest text-[#3A2E2A] uppercase opacity-50">
             &copy; {new Date().getFullYear()} Youtique Jewelry. All Rights
             Reserved.
           </p>
           <div className="flex items-center gap-6">
-            <p className="text-[10px] uppercase tracking-widest text-[#3A2E2A] opacity-50">
+            <p className="text-[10px] tracking-widest text-[#3A2E2A] uppercase opacity-50">
               Designed with Love
             </p>
           </div>
