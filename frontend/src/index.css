@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@layer components {
+  .trace-border {
+    padding: 2.5px;
+    border-radius: 18px;
+    background: conic-gradient(
+      from 200deg,
+      #3b82f6,
+      #546373,
+      #ec4899,
+      #06b6d4,
+      #3b82f6
+    );
+  }
+}

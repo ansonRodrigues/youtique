@@ -10,12 +10,12 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center py-24 px-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-8">
-        <h2 className="text-3xl font-light text-[#3A2E2A] text-center mb-2">
+    <div className="flex items-center justify-center px-4 py-24">
+      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+        <h2 className="mb-2 text-center text-3xl font-light text-[#3A2E2A]">
           Welcome Back
         </h2>
-        <p className="text-sm text-[#6B5C55] text-center mb-8">
+        <p className="mb-8 text-center text-sm text-[#6B5C55]">
           Sign in to continue shopping
         </p>
 
@@ -26,14 +26,7 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="
-              w-full px-4 py-3 rounded-lg
-              border border-[#E6D5C7]
-              text-[#3A2E2A]
-              placeholder-[#9A857A]
-              focus:outline-none
-              focus:ring-2 focus:ring-[#C9A24D]/40
-            "
+            className="w-full rounded-lg border border-[#E6D5C7] px-4 py-3 text-[#3A2E2A] placeholder-[#9A857A] focus:ring-2 focus:ring-[#C9A24D]/40 focus:outline-none"
           />
 
           <input
@@ -42,33 +35,20 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="
-              w-full px-4 py-3 rounded-lg
-              border border-[#E6D5C7]
-              text-[#3A2E2A]
-              placeholder-[#9A857A]
-              focus:outline-none
-              focus:ring-2 focus:ring-[#C9A24D]/40
-            "
+            className="w-full rounded-lg border border-[#E6D5C7] px-4 py-3 text-[#3A2E2A] placeholder-[#9A857A] focus:ring-2 focus:ring-[#C9A24D]/40 focus:outline-none"
           />
 
           <button
             type="submit"
-            className=" 
-              w-full py-3 
-              bg-[#3A2E2A] text-white 
-              hover:bg-[#C9A24D] 
-              transition-all duration-300 
-              rounded-sm shadow-md 
-              text-xs uppercase tracking-widest"
+            className="w-full rounded-sm bg-[#3A2E2A] py-3 text-xs tracking-widest text-white uppercase shadow-md transition-all duration-300 hover:bg-[#C9A24D]"
           >
             Login
           </button>
         </form>
 
-        <p className="text-center text-sm text-[#6B5C55] mt-6">
+        <p className="mt-6 text-center text-sm text-[#6B5C55]">
           Don’t have an account?{" "}
-          <span className="text-[#C9A24D] cursor-pointer hover:underline">
+          <span className="cursor-pointer text-[#C9A24D] hover:underline">
             Sign up
           </span>
         </p>
