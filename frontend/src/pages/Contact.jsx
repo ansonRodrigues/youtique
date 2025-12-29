@@ -1,28 +1,24 @@
 import React from "react";
-import { assets } from "../assets/assets"; // Importing from assets for consistency
+import { assets } from "../assets/assets";
 import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
     <>
-      {/* Added pt-28 to clear the h-20 navbar (80px) + 32px of breathing room */}
       <section className="overflow-hidden pt-16 pb-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-center justify-between gap-12 lg:flex-row lg:gap-20">
-            {/* Left – Visual Element */}
+          <div className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:gap-20">
             <div className="order-2 flex w-full justify-center lg:order-1 lg:w-1/2 lg:justify-start">
               <div className="relative">
                 <img
                   src={assets.contactUs || "/assets/contactUs.png"}
                   alt="Contact Youtique"
-                  className="h-auto w-full max-w-sm object-contain shadow-xl lg:max-w-md"
+                  className="h-auto w-full max-w-sm object-contain lg:max-w-md"
                 />
-                {/* Decorative gold accent behind image */}
-                <div className="absolute -top-4 -left-4 -z-10 h-32 w-32 border-t-2 border-l-2 border-[#C9A24D]/30"></div>
+                <div className="absolute -right-4 -bottom-4 -z-10 h-32 w-32 border-r-2 border-b-2 border-[#C9A24D]/30"></div>
               </div>
             </div>
 
-            {/* Right – Content & Form */}
             <div className="order-1 flex w-full flex-col items-start space-y-6 lg:order-2 lg:w-1/2">
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -42,11 +38,12 @@ const Contact = () => {
                   from you.
                 </p>
 
-                {/* Contact Info List */}
                 <ul className="space-y-5">
                   <li className="group flex items-center gap-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#3A2E2A] text-[#C9A24D] transition-transform group-hover:scale-110">
-                      <span className="text-lg">✉</span>
+                    <span className="flex h-8 w-8 items-center justify-center text-[#C9A24D] transition-transform group-hover:scale-110">
+                      <span className="text-lg">
+                        <img src={assets.email} alt="✉" />
+                      </span>
                     </span>
                     <div>
                       <p className="text-[10px] font-bold tracking-widest text-[#C9A24D] uppercase">
@@ -56,19 +53,20 @@ const Contact = () => {
                     </div>
                   </li>
                   <li className="group flex items-center gap-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#3A2E2A] text-[#C9A24D] transition-transform group-hover:scale-110">
-                      <span className="text-lg">✆</span>
+                    <span className="flex h-8 w-8 items-center justify-center text-[#C9A24D] transition-transform group-hover:scale-110">
+                      <span className="text-lg">
+                        <img src={assets.phone} alt="✆" />
+                      </span>
                     </span>
                     <div>
                       <p className="text-[10px] font-bold tracking-widest text-[#C9A24D] uppercase">
                         Call Us
                       </p>
-                      <p className="text-[#3A2E2A]">+91 98765 43210</p>
+                      <p className="text-[#3A2E2A]">+91 98205 13604</p>
                     </div>
                   </li>
                 </ul>
 
-                {/* Refined Form */}
                 <form className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2">
                   <input
                     type="text"

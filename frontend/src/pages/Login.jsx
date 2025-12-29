@@ -10,7 +10,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-4 py-24">
+    <div className="flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
         <h2 className="mb-2 text-center text-3xl font-light text-[#3A2E2A]">
           Welcome Back
