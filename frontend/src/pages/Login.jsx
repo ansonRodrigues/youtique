@@ -10,7 +10,11 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-4 py-20">
+    /* Changes:
+       1. Added 'min-h-[calc(100vh-5rem)]' to account for the 80px (h-20) navbar.
+       2. Kept 'flex items-center justify-center' for perfect centering.
+    */
+    <div className="flex min-h-[calc(100vh-5rem)] items-center justify-center px-4">
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
         <h2 className="mb-2 text-center text-3xl font-light text-[#3A2E2A]">
           Welcome Back
@@ -40,7 +44,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full rounded-sm bg-[#3A2E2A] py-3 text-xs tracking-widest text-white uppercase shadow-md transition-all duration-300 hover:bg-[#C9A24D]"
+            className="w-full rounded-sm bg-[#3A2E2A] py-3 text-xs font-medium tracking-widest text-white uppercase shadow-md transition-all duration-300 hover:bg-[#C9A24D]"
           >
             Login
           </button>
