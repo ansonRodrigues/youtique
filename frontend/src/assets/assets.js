@@ -1,15 +1,15 @@
-import logo from "./logo.png";
-import aboutUs from "./aboutUs.png";
-import notfoundPage from "./404error.png";
-import loginImg from "./login.png";
-import cart from "./cart.png";
-import searchIcon from "./search.png";
-import heroImg from "./hero.jpg";
-import contactUs from "./contact.png";
-import iG from "./instagram.png";
-import twitter from "./twitter.png";
-import phone from "./phone.png";
-import email from "./email.png";
+import logo from "./ui/logo.png";
+import aboutUs from "./ui/aboutUs.png";
+import notfoundPage from "./ui/404error.png";
+import loginImg from "./ui/login.png";
+import cart from "./ui/cart.png";
+import searchIcon from "./ui/search.png";
+import heroImg from "./ui/hero.jpg";
+import contactUs from "./ui/contact.png";
+import iG from "./ui/instagram.png";
+import twitter from "./ui/twitter.png";
+import phone from "./ui/phone.png";
+import email from "./ui/email.png";
 
 export const assets = {
   logo,

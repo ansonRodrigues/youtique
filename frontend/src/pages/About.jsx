@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* --- Values Section --- */}
+
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <h3 className="mb-12 font-serif text-3xl text-[#3A2E2A]">
@@ -84,7 +84,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* --- Mission Statement / CTA --- */}
       <section className="bg-[#3A2E2A] py-24 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="mb-6 font-serif text-3xl md:text-4xl">

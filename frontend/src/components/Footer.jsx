@@ -1,5 +1,5 @@
 import React from "react";
-import { assets } from "../assets/assets"; // Assuming you have social icons or a logo here
+import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
