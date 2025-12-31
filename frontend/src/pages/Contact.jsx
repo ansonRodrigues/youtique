@@ -88,7 +88,7 @@ const Contact = () => {
                     placeholder="How can we help?"
                     className="w-full border-b border-[#3A2E2A]/20 bg-transparent py-3 text-[#3A2E2A] placeholder-[#3A2E2A]/40 transition outline-none focus:border-[#C9A24D] sm:col-span-2"
                   />
-                  <button className="mt-4 w-full bg-[#3A2E2A] py-4 text-xs font-bold tracking-[0.2em] text-white uppercase transition hover:bg-[#4d3f3a] sm:col-span-2">
+                  <button className="mt-4 w-full rounded-sm bg-[#3A2E2A] px-7 py-3 text-xs tracking-widest text-white uppercase shadow-md transition-all duration-300 hover:bg-[#C9A24D] sm:col-span-2">
                     Send Message
                   </button>
                 </form>
