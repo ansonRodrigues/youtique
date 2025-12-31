@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="h-20 bg-white px-6 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+    <nav className="sticky top-0 z-50 h-20 bg-white/70 px-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md">
       <div className="relative mx-auto flex h-full max-w-7xl items-center">
         <img src={assets.logo} alt="Youtique" className="w-45" />
 
