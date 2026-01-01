@@ -8,7 +8,7 @@ const SignatureCollections = () => {
       <section className="py-10">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center">
-            <p className="mb-3 text-xs tracking-[0.25em] text-[#C9A24D] uppercase">
+            <p className="mb-3 text-xs tracking-[0.25em] text-slate-400 uppercase">
               Explore
             </p>
 
