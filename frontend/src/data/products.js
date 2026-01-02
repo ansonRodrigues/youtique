@@ -1,7 +1,6 @@
 import prod1 from "../assets/products/prod1.jpg";
 import prod2 from "../assets/products/prod2.jpg";
 import prod3 from "../assets/products/prod3.jpg";
-import prod4 from "../assets/products/prod4.jpg";
 
 export const products = [
   {
@@ -24,12 +23,5 @@ export const products = [
     description: "A bold statement piece crafted in limited quantity.",
     price: 1899,
     image: prod3,
-  },
-  {
-    id: "minimal-01",
-    name: "Ivory Resin Cuff",
-    description: "Soft tones designed for everyday elegance.",
-    price: 1299,
-    image: prod4,
   },
 ];

@@ -1,17 +1,33 @@
 import React from "react";
+import { products } from "../data/products";
+import ProductCardDummy from "../components/ProductCardDummy";
 
 const Collections = () => {
-  let a = 10;
-  let b = [1, 2, 3, 4, 50];
-
   return (
     <div>
-      Collection num {a}
-      <div>
-        {b.map((elem) => (
-          <div key={elem}>{elem}</div>
-        ))}
-      </div>
+      <section className="py-10">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-14 text-center">
+            <p className="mb-3 text-xs tracking-[0.25em] text-slate-400 uppercase">
+              Explore
+            </p>
+
+            <h2 className="font-serif text-3xl text-[#3A2E2A] md:text-4xl">
+              Signature Collections
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-[#3A2E2A] opacity-70">
+              Thoughtfully curated pieces that reflect our love for art,
+              craftsmanship, and timeless design.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {products.map((elem) => (
+              <ProductCardDummy product={elem} />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
