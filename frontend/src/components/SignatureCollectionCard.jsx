@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const SignatureCollectionCard = ({ product }) => {
   return (
-    /* Added the 'to' prop here */
     <Link
       to={`/collections/${product.id}`}
       className="group relative overflow-hidden rounded-3xl bg-white/60 shadow-[0_18px_40px_rgba(0,0,0,0.08)] ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(0,0,0,0.12)]"

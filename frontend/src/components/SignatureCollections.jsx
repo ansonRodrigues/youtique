@@ -15,7 +15,6 @@ const SignatureCollections = () => {
 
       <div className="grid gap-8 md:grid-cols-3">
         {products.map((elem) => (
-          /* Added the key prop here */
           <SignatureCollectionCard key={elem.id} product={elem} />
         ))}
       </div>

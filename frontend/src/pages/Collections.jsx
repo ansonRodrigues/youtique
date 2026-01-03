@@ -1,33 +1,77 @@
-import React from "react";
-import { products } from "../data/products";
+import React, { useState } from "react";
 import ProductCardDummy from "../components/ProductCardDummy";
+import { products } from "../data/products";
+
+const categories = [
+  "All",
+  "Anklets",
+  "Bracelets",
+  "Chains",
+  "Phone Charms",
+  "Resin Art",
+  "Earrings",
+];
 
 const Collections = () => {
+  // products }) => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProducts =
+    activeCategory === "All"
+      ? products
+      : products.filter((p) => p.category === activeCategory);
+
   return (
-    <div>
-      <section className="py-10">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-14 text-center">
-            <p className="mb-3 text-xs tracking-[0.25em] text-slate-400 uppercase">
-              Explore
-            </p>
+    <div className="relative min-h-screen w-full font-sans text-slate-900">
+      {/* Main Content */}
+      <main className="relative z-10 mx-auto max-w-7xl px-6 py-20">
+        {/* Header Section */}
+        <header className="mb-16 text-center">
+          <span className="text-xs font-bold tracking-[0.3em] text-indigo-500 uppercase">
+            Curated Treasures
+          </span>
+          <h1 className="mt-4 font-serif text-5xl text-slate-900 md:text-6xl">
+            The Collection
+          </h1>
+          <p className="mx-auto mt-4 max-w-md text-slate-500">
+            Handcrafted pieces designed to bring a touch of magic to your
+            everyday style.
+          </p>
+        </header>
 
-            <h2 className="font-serif text-3xl text-[#3A2E2A] md:text-4xl">
-              Signature Collections
-            </h2>
-
-            <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-[#3A2E2A] opacity-70">
-              Thoughtfully curated pieces that reflect our love for art,
-              craftsmanship, and timeless design.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {products.map((elem) => (
-              <ProductCardDummy product={elem} />
-            ))}
-          </div>
+        {/* Category Filter */}
+        <div className="mb-12 flex flex-wrap justify-center gap-3">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 ${
+                activeCategory === cat
+                  ? "bg-slate-900 text-white shadow-lg"
+                  : "bg-white/50 text-slate-600 ring-1 ring-black/5 backdrop-blur-sm hover:bg-white/80"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
-      </section>
+
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filteredProducts.map((product) => (
+            <ProductCardDummy key={product.id} product={product} />
+          ))}
+        </div>
+
+        {/* Empty State */}
+        {filteredProducts.length === 0 && (
+          <div className="py-20 text-center">
+            <p className="text-slate-400">
+              No pieces found in this category yet.
+            </p>
+          </div>
+        )}
+      </main>
     </div>
   );
 };

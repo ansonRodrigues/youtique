@@ -17,19 +17,20 @@ const About = () => {
             </div>
 
             <div className="order-1 flex w-full flex-col items-start space-y-4 lg:order-2 lg:w-1/2 lg:space-y-6">
+              {/* Accent */}
               <div className="flex items-center gap-2">
-                <span className="h-[1.5px] w-8 bg-[#3A2E2A] lg:w-12"></span>
-                <p className="text-xs font-medium tracking-[0.2em] text-[#C9A24D] uppercase lg:text-sm">
+                <span className="h-[1.5px] w-8 bg-slate-400 lg:w-12" />
+                <p className="text-xs font-medium tracking-[0.2em] text-slate-400 uppercase lg:text-sm">
                   Our Story
                 </p>
               </div>
 
-              <h2 className="font-serif text-4xl leading-tight text-[#3A2E2A] md:text-5xl">
+              <h2 className="font-serif text-4xl leading-tight text-slate-900 md:text-5xl">
                 Crafted with <br />
-                <span className="italic">Elegance</span>
+                <span className="text-slate-800 italic">Elegance</span>
               </h2>
 
-              <div className="max-w-lg space-y-4 text-base leading-relaxed text-[#3A2E2A] opacity-80 lg:text-lg">
+              <div className="max-w-lg space-y-4 text-base leading-relaxed text-slate-700 opacity-80 lg:text-lg">
                 <p>
                   At Youtique, we believe jewelry is more than an accessory —
                   it’s a reflection of individuality. Each bracelet is
@@ -49,33 +50,36 @@ const About = () => {
 
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <h3 className="mb-12 font-serif text-3xl text-[#3A2E2A]">
+          <h3 className="mb-12 font-serif text-3xl text-slate-900">
             What Sets Us Apart
           </h3>
+
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
             <div className="space-y-3">
-              <h4 className="text-sm font-medium tracking-widest text-[#C9A24D] uppercase">
+              <h4 className="text-xs font-medium tracking-widest text-slate-400 uppercase">
                 Quality Materials
               </h4>
-              <p className="text-[#3A2E2A] opacity-70">
+              <p className="text-slate-600 opacity-90">
                 We source only the finest sustainable metals and ethically
                 obtained gemstones.
               </p>
             </div>
+
             <div className="space-y-3">
-              <h4 className="text-sm font-medium tracking-widest text-[#C9A24D] uppercase">
+              <h4 className="text-xs font-medium tracking-widest text-slate-400 uppercase">
                 Artisan Design
               </h4>
-              <p className="text-[#3A2E2A] opacity-70">
+              <p className="text-slate-600 opacity-90">
                 Every curve and clasp is sketched by hand and refined for
                 ultimate comfort.
               </p>
             </div>
+
             <div className="space-y-3">
-              <h4 className="text-sm font-medium tracking-widest text-[#C9A24D] uppercase">
+              <h4 className="text-xs font-medium tracking-widest text-slate-400 uppercase">
                 Timeless Style
               </h4>
-              <p className="text-[#3A2E2A] opacity-70">
+              <p className="text-slate-600 opacity-90">
                 Our pieces are designed to transcend trends and be loved for
                 generations.
               </p>
@@ -84,15 +88,17 @@ const About = () => {
         </div>
       </section>
 
-      <section className="bg-[#3A2E2A] py-24 text-white">
+      <section className="py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="mb-6 font-serif text-3xl md:text-4xl">
+          <h2 className="mb-6 font-serif text-3xl text-slate-900 md:text-4xl">
             Experience the Youtique Touch
           </h2>
-          <p className="mb-10 text-lg font-light italic opacity-80">
+
+          <p className="mb-10 text-lg text-slate-600 italic">
             "Jewelry that speaks when you don't have to."
           </p>
-          <button className="bg-[#C9A24D] px-8 py-3 text-sm font-medium tracking-widest text-white uppercase transition-colors duration-300 hover:bg-[#b08b3a]">
+
+          <button className="rounded-sm bg-slate-900 px-8 py-3 text-sm font-medium tracking-widest text-white uppercase shadow-md transition-all duration-300 hover:bg-slate-800">
             Shop the Collection
           </button>
         </div>
