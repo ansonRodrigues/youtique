@@ -1,148 +1,127 @@
 import React from "react";
-import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
+import { Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="border-t border-black/5 bg-white pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
           <div className="space-y-6">
-            <h3 className="font-serif text-2xl text-[#3A2E2A]">Youtique</h3>
-            <p className="text-sm leading-relaxed text-[#3A2E2A] opacity-70">
+            <h3 className="font-serif text-2xl text-slate-900">Youtique</h3>
+
+            <p className="text-sm leading-relaxed text-slate-600">
               Handcrafted resin art and bead bracelets designed to reflect your
               unique soul. Every piece tells a story of nature and elegance.
             </p>
+
+            {/* Social icons */}
             <div className="flex gap-4">
               <a
                 href="#"
-                className="flex h-8 w-8 items-center justify-center text-[#3A2E2A] transition-all hover:bg-[#3A2E2A] hover:text-white"
+                className="group flex h-9 w-9 items-center justify-center text-slate-500 transition-all hover:text-slate-900"
               >
-                <span className="text-xs">
-                  <img src={assets.iG} alt="IG" />
-                </span>
+                <Instagram
+                  strokeWidth={1.5}
+                  size={35}
+                  className="transition-transform group-hover:scale-110"
+                />
               </a>
+
               <a
                 href="#"
-                className="flex h-8 w-8 items-center justify-center text-[#3A2E2A] transition-all hover:bg-[#3A2E2A] hover:text-white"
+                className="group flex h-9 w-9 items-center justify-center text-slate-500 transition-all hover:text-slate-900"
               >
-                <span className="text-xs">
-                  <img src={assets.twitter} alt="X" />
-                </span>
+                <Twitter
+                  strokeWidth={1.5}
+                  size={35}
+                  className="transition-transform group-hover:scale-110"
+                />
               </a>
             </div>
           </div>
 
+          {/* Collections */}
           <div>
-            <h4 className="mb-6 text-xs font-medium tracking-widest text-[#3A2E2A] uppercase">
+            <h4 className="mb-6 text-xs font-medium tracking-widest text-slate-900 uppercase">
               Collections
             </h4>
+
             <ul className="space-y-4">
-              <li>
-                <Link
-                  to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
-                >
-                  Bead Bracelets
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
-                >
-                  Resin Art
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
-                >
-                  New Arrivals
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/collections"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:text-[#C9A24D] hover:opacity-100"
-                >
-                  Gift Sets
-                </Link>
-              </li>
+              {["Bead Bracelets", "Resin Art", "New Arrivals", "Gift Sets"].map(
+                (item) => (
+                  <li key={item}>
+                    <Link
+                      to="/collections"
+                      className="relative text-sm text-slate-600 transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:text-slate-900 hover:after:w-full"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
+          {/* Customer Care */}
           <div>
-            <h4 className="mb-6 text-xs font-medium tracking-widest text-[#3A2E2A] uppercase">
+            <h4 className="mb-6 text-xs font-medium tracking-widest text-slate-900 uppercase">
               Customer Care
             </h4>
+
             <ul className="space-y-4">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
-                >
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/shipping"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
-                >
-                  Shipping Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/faq"
-                  className="text-sm text-[#3A2E2A] opacity-70 transition-all hover:opacity-100"
-                >
-                  FAQs
-                </Link>
-              </li>
+              {[
+                { label: "Our Story", to: "/about" },
+                { label: "Shipping Policy", to: "/shipping" },
+                { label: "Contact Us", to: "/contact" },
+                { label: "FAQs", to: "/faq" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link
+                    to={item.to}
+                    className="relative text-sm text-slate-600 transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:text-slate-900 hover:after:w-full"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Newsletter */}
           <div className="space-y-6">
-            <h4 className="mb-2 text-xs font-medium tracking-widest text-[#3A2E2A] uppercase">
+            <h4 className="text-xs font-medium tracking-widest text-slate-900 uppercase">
               Stay Connected
             </h4>
-            <p className="text-sm text-[#3A2E2A] opacity-70">
+
+            <p className="text-sm text-slate-600">
               Join our mailing list for exclusive launches.
             </p>
+
             <div className="flex flex-col space-y-2">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="border-b border-[#3A2E2A]/30 bg-transparent py-2 text-sm text-[#3A2E2A] transition-all focus:border-[#C9A24D] focus:outline-none"
+                className="border-b border-slate-300 bg-transparent py-2 text-sm text-slate-700 transition-all focus:border-slate-900 focus:outline-none"
               />
-              <button className="pt-2 text-left text-xs font-semibold tracking-[0.2em] text-[#3A2E2A] uppercase transition-all hover:text-[#C9A24D]">
-                Subscribe &rarr;
+
+              <button className="pt-2 text-left text-xs font-semibold tracking-[0.2em] text-slate-700 uppercase transition-colors hover:text-slate-900">
+                Subscribe →
               </button>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-[#3A2E2A]/10 pt-8 md:flex-row">
-          <p className="text-[10px] tracking-widest text-[#3A2E2A] uppercase opacity-50">
-            &copy; {new Date().getFullYear()} Youtique Jewelry. All Rights
-            Reserved.
+        {/* Bottom */}
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-8 md:flex-row">
+          <p className="text-[10px] tracking-widest text-slate-500 uppercase">
+            © {new Date().getFullYear()} Youtique Jewelry. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <p className="text-[10px] tracking-widest text-[#3A2E2A] uppercase opacity-50">
-              Designed with Love
-            </p>
-          </div>
+
+          <p className="text-[10px] tracking-widest text-slate-500 uppercase">
+            Designed with Love
+          </p>
         </div>
       </div>
     </footer>
