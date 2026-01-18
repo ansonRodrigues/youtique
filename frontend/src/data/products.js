@@ -8,6 +8,7 @@ export const products = [
     name: "Floral Resin Bracelet",
     description: "Real dried flowers preserved in crystal-clear resin.",
     price: 1499,
+    category: "Bracelets",
     image: prod1,
   },
   {
@@ -15,6 +16,7 @@ export const products = [
     name: "Ivory Resin Cuff",
     description: "Soft tones designed for everyday elegance.",
     price: 1299,
+    category: "Bracelets",
     image: prod2,
   },
   {
@@ -22,6 +24,7 @@ export const products = [
     name: "Amber Bloom Bracelet",
     description: "A bold statement piece crafted in limited quantity.",
     price: 1899,
+    category: "Bracelets",
     image: prod3,
   },
 ];

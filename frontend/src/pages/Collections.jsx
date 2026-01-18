@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ProductCardDummy from "../components/ProductCardDummy";
+import { useState } from "react";
 import { products } from "../data/products";
+import ProductCardDummy from "../components/ProductCardDummy";
 
 const categories = [
   "All",
@@ -13,51 +13,48 @@ const categories = [
 ];
 
 const Collections = () => {
-  // products }) => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProducts =
     activeCategory === "All"
       ? products
-      : products.filter((p) => p.category === activeCategory);
+      : products.filter((product) => product.category === activeCategory);
 
   return (
-    <div className="relative min-h-screen w-full font-sans text-slate-900">
-      {/* Main Content */}
-      <main className="relative z-10 mx-auto max-w-7xl px-6 py-20">
-        {/* Header Section */}
-        <header className="mb-16 text-center">
-          <span className="text-xs font-bold tracking-[0.3em] text-indigo-500 uppercase">
-            Curated Treasures
-          </span>
-          <h1 className="mt-4 font-serif text-5xl text-slate-900 md:text-6xl">
-            The Collection
-          </h1>
-          <p className="mx-auto mt-4 max-w-md text-slate-500">
-            Handcrafted pieces designed to bring a touch of magic to your
-            everyday style.
+    <section className="relative pt-28 pb-24">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Header */}
+        <div className="mb-14 text-center">
+          <h1 className="font-serif text-4xl text-slate-800">Collections</h1>
+          <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-slate-500">
+            A curated selection of handcrafted pieces designed to complement
+            every moment.
           </p>
-        </header>
-
-        {/* Category Filter */}
-        <div className="mb-12 flex flex-wrap justify-center gap-3">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`rounded-full px-6 py-2 text-sm font-medium transition-all duration-300 ${
-                activeCategory === cat
-                  ? "bg-slate-900 text-white shadow-lg"
-                  : "bg-white/50 text-slate-600 ring-1 ring-black/5 backdrop-blur-sm hover:bg-white/80"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
         </div>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Category Filter */}
+        <div className="mb-16 flex flex-wrap justify-center gap-4">
+          {categories.map((category) => {
+            const isActive = activeCategory === category;
+
+            return (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`rounded-full px-6 py-2 text-sm transition-all duration-300 ${
+                  isActive
+                    ? "bg-slate-900 text-white shadow-md"
+                    : "bg-white/60 text-slate-600 ring-1 ring-black/5 backdrop-blur hover:bg-white/80"
+                } `}
+              >
+                {category}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {filteredProducts.map((product) => (
             <ProductCardDummy key={product.id} product={product} />
           ))}
@@ -65,14 +62,12 @@ const Collections = () => {
 
         {/* Empty State */}
         {filteredProducts.length === 0 && (
-          <div className="py-20 text-center">
-            <p className="text-slate-400">
-              No pieces found in this category yet.
-            </p>
+          <div className="mt-24 text-center text-slate-500">
+            No pieces available in this collection.
           </div>
         )}
-      </main>
-    </div>
+      </div>
+    </section>
   );
 };
 
