@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { products } from "../data/products";
-import ProductCardDummy from "../components/ProductCardDummy";
+import { products } from "../../data/products";
+import ProductCardDummy from "./ProductCardDummy";
 
 const categories = [
   "All",

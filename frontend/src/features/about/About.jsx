@@ -1,6 +1,6 @@
 import React from "react";
-import { assets } from "../assets/assets";
-import Footer from "../components/Footer";
+import { assets } from "../../assets/assets";
+import Footer from "../../components/layout/Footer";
 
 const About = () => {
   return (
@@ -103,8 +103,6 @@ const About = () => {
           </button>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

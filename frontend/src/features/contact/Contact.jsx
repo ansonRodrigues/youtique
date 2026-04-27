@@ -1,7 +1,6 @@
 import React from "react";
 import { Mail, Phone } from "lucide-react";
-import { assets } from "../assets/assets";
-import Footer from "../components/Footer";
+import { assets } from "../../assets/assets";
 
 const Contact = () => {
   return (
@@ -109,8 +108,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

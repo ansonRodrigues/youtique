@@ -27,4 +27,13 @@ export const products = [
     category: "Bracelets",
     image: prod3,
   },
+
+  {
+    id: "statement-01",
+    name: "Amber Bloom Bracelet",
+    description: "A bold statement piece crafted in limited quantity.",
+    price: 1899,
+    category: "Bracelets",
+    image: prod3,
+  },
 ];
